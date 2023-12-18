@@ -31,8 +31,8 @@ const validateInput = (inputObj) => {
     const role = inputObj.role;
 
     const isNotEmpty = (value) => value.trim() !== "";
-    const isUsernameValid = (username) => username.length > 3 && !(/^\d/.test(username));
-    const isPasswordValid = (password) => password.length > 4 && /\s/.test(username);
+    const isUsernameValid = (username) => username.trim().length > 3 && !(/^\d/.test(username));
+    const isPasswordValid = (password) => password.trim().length > 4 && /\s/.test(username);
 
 
     const usernameEmpty = !isNotEmpty(cleanedUsername);
